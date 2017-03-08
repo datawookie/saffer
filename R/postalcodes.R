@@ -9,4 +9,4 @@
 #' }
 #'
 #' @source \url{https://www.postoffice.co.za/contactus/postalcodes.xls}
-"codes"
+"postalcodes"
