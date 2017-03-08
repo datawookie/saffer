@@ -1,11 +1,9 @@
 Package: saffeR
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Things relating to South Africa
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Authors@R: person("Andrew", "Collier", middle = "B.", email = "andrew@exegetic.biz", role = c("aut", "cre"))
+Description: A collection of data and functions for things relevant to South Africa.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
