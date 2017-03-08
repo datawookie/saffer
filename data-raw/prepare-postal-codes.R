@@ -5,14 +5,9 @@ library(dplyr)
 postalcodes <- mutate(postalcodes,
                       BoxCode = ifelse(is.na(BoxCode), NA, sprintf("%04d", BoxCode)),
                       StreetCode = ifelse(is.na(StreetCode), NA, sprintf("%04d", StreetCode))
-) %>% select(-id) %>% select(Area, Suburb, everything())
-
-code.levels = na.exclude(union(postalcodes$BoxCode, postalcodes$StreetCode)) %>% sort
-
-postalcodes <- mutate(postalcodes,
-                      BoxCode = factor(BoxCode, levels = code.levels),
-                      StreetCode = factor(StreetCode, levels = code.levels)
-)
+) %>% mutate(
+  Province = factor(sapply(ifelse(is.na(StreetCode), BoxCode, StreetCode), postalcodes_province))
+) %>% select(-id) %>% select(Province, Area, Suburb, everything())
 
 names(postalcodes) <- tolower(names(postalcodes))
 

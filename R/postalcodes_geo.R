@@ -7,5 +7,5 @@
 #'  \item{lon}{Longitude.}
 #' }
 #'
-#' @source \url{https://www.postoffice.co.za/contactus/postalcodes.xls}
+#' @source \url{http://www.geonames.org/postal-codes/postal-codes-south-africa.html}
 "postalcodes_geo"
