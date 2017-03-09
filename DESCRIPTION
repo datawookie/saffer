@@ -3,7 +3,7 @@ Type: Package
 Title: Things relating to South Africa
 Version: 0.1.0
 Authors@R: c(
-    person("Andrew", "Collier", middle = "B.", email = "andrew@exegetic.biz", role = c("aut", "cre")),
+    person("Andrew B.", "Collier", email = "andrew@exegetic.biz", role = c("aut", "cre")),
     person("Jon", "Calder", email = "jonmcalder@gmail.com", role = c("aut")))
 Description: A collection of data and functions for things relevant to South Africa.
 License: MIT + file LICENSE
