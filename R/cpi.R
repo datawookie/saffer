@@ -9,10 +9,10 @@
 "cpi"
 
 if (FALSE) {
+  library(dplyr)
   cpi <- read.csv(file.path("data-raw", "consumer-price-index.csv"), stringsAsFactors = FALSE) %>%
-    mutate(
-      month = factor(month, labels = month.abb)
-    )
+    mutate(month = factor(month, levels = month.abb)) %>%
+    arrange(year, month)
   save(cpi, file = file.path("data", "cpi.rda"))
   rm(cpi)
 }
