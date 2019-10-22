@@ -7,7 +7,8 @@ Authors@R: c(
     person("Jon", "Calder", email = "jonmcalder@gmail.com", role = c("aut")),
     person("Aida", "Ylanan", email = "a1daylanan@ucla.edu", role = c("ctb")),
     person("Paola", "Scaramuzzi", email = "pascar18@gmail.com", role = c("ctb")),
-    person("Jason", "Chong", email = "jasonchongg@gmail.com", role = c("ctb")))
+    person("Jason", "Chong", email = "jasonchongg@gmail.com", role = c("ctb")),
+    person("Adrian", "Frith", role = c("ctb")))
 Description: A collection of data and functions for things relevant to South Africa.
 License: MIT + file LICENSE
 Encoding: UTF-8
