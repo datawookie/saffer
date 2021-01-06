@@ -1,6 +1,6 @@
-# saffeR
+# saffer
 
-<img src="inst/img/saffeR.png" width="250" align="right">
+<img src="inst/img/saffer.png" width="250" align="right">
 
 Saffer (plural Saffers): (slang) A native or inhabitant of South Africa.
 
@@ -8,11 +8,11 @@ An R package aggregating a selection of things relating to South Africa.
 
 ## Installation
 
-You can install saffeR from GitHub with:
+You can install saffer from GitHub with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("datawookie/saffeR")
+devtools::install_github("datawookie/saffer")
 ```
 
 ## Useful Resources

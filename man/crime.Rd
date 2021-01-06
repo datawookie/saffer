@@ -4,14 +4,16 @@
 \name{crime}
 \alias{crime}
 \title{Dataset of Crime in South Africa}
-\format{A data frame with 339471 records and 5 variables:
+\format{
+A data frame with 339471 records and 5 variables:
 \describe{
   \item{Province}{South African Province;}
   \item{Station}{Police Station in Respective Province;}
   \item{Category}{Types of Crime Committed;}
   \item{Year}{Year in which Crimes were Committed;}
   \item{Crime_Rate}{Number of Crimes Committed in a Given Year;}
-}}
+}
+}
 \source{
 These data were downloaded from Kaggle user Stephan Wessels, retrievable here: https://www.kaggle.com/slwessels/crime-statistics-for-south-africa.
 }

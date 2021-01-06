@@ -1,4 +1,4 @@
-Package: saffeR
+Package: saffer
 Type: Package
 Title: Things relating to South Africa
 Version: 0.1.0
@@ -13,4 +13,5 @@ Description: A collection of data and functions for things relevant to South Afr
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.0.1
+RoxygenNote: 7.1.1
+Suggests: hexSticker
