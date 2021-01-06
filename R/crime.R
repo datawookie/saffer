@@ -15,18 +15,7 @@
 #'   \item{Year}{Year in which Crimes were Committed;}
 #'   \item{Crime_Rate}{Number of Crimes Committed in a Given Year;}
 #' }
-#' @export
+#'
 #' @source
 #' These data were downloaded from Kaggle user Stephan Wessels, retrievable here: https://www.kaggle.com/slwessels/crime-statistics-for-south-africa.
 "crime"
-
-if(FALSE) {
-  library(tidyr)
-
-  crime <- read.csv("../data-raw/crime.csv") %>%
-    gather(year, count, -Province, -Station, -Category) %>%
-    mutate(year = substr(year, 2, 5) %>% as.numeric()) %>%
-    setNames(tolower(names(.)))
-
-  devtools::use_data(crime, overwrite = TRUE)
-}
