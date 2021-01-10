@@ -1,6 +1,9 @@
 library(rvest)
 library(tidyverse)
+library(here)
 # library(purrr)
+
+source(here(file.path("R", "fuel-type.R")))
 
 URL <- "https://www.sapia.org.za/Overview/Old-fuel-prices"
 
@@ -46,7 +49,7 @@ extract_table <- function(table) {
       values_to = "price"
       ) %>%
     mutate(
-      region = str_to_lower(region),
+      fuel = factor(fuel, levels = fuel_type_labels),
       date = as.Date(strptime(date, "%d-%b-%y")),
       price = str_replace(price, ",", "."),
       price = str_replace(price, " ", ""),
@@ -54,8 +57,14 @@ extract_table <- function(table) {
       price = as.numeric(price)
     )
 }
-fuelprice <- map_df(tables, extract_table) %>%
+fuel_price <- map_df(tables, extract_table) %>%
+  mutate(
+    region = str_to_lower(region),
+    region = ifelse(region == "gauteng", "inland", region),
+    region = factor(region)
+  ) %>%
   arrange(fuel, region, date) %>%
+  select(date, everything()) %>%
   na.omit()
 
-usethis::use_data(fuelprice)
+usethis::use_data(fuel_price, overwrite = TRUE)
