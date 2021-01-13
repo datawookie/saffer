@@ -7,4 +7,4 @@
 #' }
 #'
 #' @source \url{https://www.rebtel.com/en/international-calling-guide/phone-codes/south-africa/}
-"dialingcodes"
+"dialing_codes"
