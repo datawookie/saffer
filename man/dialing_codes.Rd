@@ -3,7 +3,7 @@
 \docType{data}
 \name{dialing_codes}
 \alias{dialing_codes}
-\title{Dialing codes for cities in South Africa.}
+\title{Dialing codes for cities in South Africa}
 \format{
 A data frame with 2 columns:
 \describe{
@@ -18,6 +18,6 @@ A data frame with 2 columns:
 dialing_codes
 }
 \description{
-Dialing codes for cities in South Africa.
+Dialing codes for cities in South Africa
 }
 \keyword{datasets}

@@ -1,4 +1,4 @@
-#' Dialing codes for cities in South Africa.
+#' Dialing codes for cities in South Africa
 #'
 #' @format A data frame with 2 columns:
 #' \describe{
