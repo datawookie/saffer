@@ -1,0 +1,82 @@
+[
+  {
+    "date": "2020-03-27",
+    "event": "Lockdown: Level 5",
+    "tags": ["COVID19", "lockdown"],
+    "details": [
+      "Alcohol sale banned."
+    ]
+  },
+  {
+    "date": "2020-05-01",
+    "event": "Lockdown: Level 4",
+    "tags": ["COVID19", "lockdown"],
+    "details": []
+  },
+  {
+    "date": "2020-05-14",
+    "event": "Lockdown: Level 4",
+    "tags": ["COVID19", "lockdown"],
+    "details": [
+      "E-commerce permitted."
+    ]
+  },
+  {
+    "date": "2020-06-01",
+    "event": "Lockdown: Level 3",
+    "tags": ["COVID19", "lockdown"],
+    "details": []
+  },
+  {
+    "date": "2020-07-12",
+    "event": "Lockdown: Level 3",
+    "tags": ["COVID19", "lockdown"],
+    "details": [
+      "Alcohol sale banned again."
+    ]
+  },
+  {
+    "date": "2020-08-13",
+    "event": "Lockdown: Level 2",
+    "tags": ["COVID19", "lockdown"],
+    "details": []
+  },
+  {
+    "date": "2020-08-18",
+    "event": "Lockdown: Level 2",
+    "tags": ["COVID19", "lockdown"],
+    "details": [
+      "Alcohol on sale again."
+    ]
+  },
+  {
+    "date": "2020-09-21",
+    "event": "Lockdown: Level 1",
+    "tags": ["COVID19", "lockdown"],
+    "details": []
+  },
+  {
+    "date": "2020-11-11",
+    "event": "Lockdown: Level 1",
+    "tags": ["COVID19", "lockdown"],
+    "details": [
+      "Relaxation of international travel."
+    ]
+  },
+  {
+    "date": "2020-12-14",
+    "event": "Lockdown: Level 1",
+    "tags": ["COVID19", "lockdown"],
+    "details": [
+      "Closure of beaches."
+    ]
+  },
+  {
+    "date": "2020-12-28",
+    "event": "Lockdown: Level 3",
+    "tags": ["COVID19", "lockdown"],
+    "details": [
+      "Alcohol sale banned again."
+    ]
+  }
+]
