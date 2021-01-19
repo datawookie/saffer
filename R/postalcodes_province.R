@@ -1,4 +1,4 @@
-#' Find province from Postal Code.
+#' Find province from Postal Code
 #'
 #' @source \url{https://en.wikipedia.org/wiki/List_of_postal_codes_in_South_Africa}
 #'

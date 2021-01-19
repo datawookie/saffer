@@ -1,4 +1,4 @@
-#' Consumer Price Index for South Africa.
+#' Consumer Price Index for South Africa
 #'
 #' @format A data frame with 3 variables:
 #' \describe{

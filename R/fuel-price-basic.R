@@ -1,4 +1,4 @@
-#' Basic Fuel Price history for South Africa.
+#' Basic Fuel Price history for South Africa
 #'
 #' @format A data frame with 4 columns:
 #' \describe{
