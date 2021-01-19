@@ -1,4 +1,4 @@
-#' Geo location of postal codes for South Africa.
+#' Geo location of postal codes for South Africa
 #'
 #' @format A data frame with 3 variables:
 #' \describe{

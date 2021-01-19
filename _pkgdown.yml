@@ -1,0 +1,16 @@
+url: datawookie.github.io/saffer
+
+destination: docs
+
+reference:
+- title: Data
+  contents:
+  - cpi
+  - crime
+  - fuel_price
+  - fuel_price_basic
+  - fuel_price_brent_crude
+  - fuel_price_usd_exchange_rate
+  - postalcodes
+  - postalcodes_geo
+  - postalcodes_province

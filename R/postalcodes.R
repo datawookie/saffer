@@ -1,4 +1,4 @@
-#' Postal codes for South Africa.
+#' Postal codes for South Africa
 #'
 #' @format A data frame with 4 variables:
 #' \describe{
