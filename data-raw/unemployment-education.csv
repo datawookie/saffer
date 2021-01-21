@@ -1,0 +1,168 @@
+# http://www.statssa.gov.za/publications/P0211/P02113rdQuarter2020.pdf
+#
+education;year;quarter;unemployment_rate
+Less than matric;2012;Jul-Sep;29,8
+Matric;2012;Jul-Sep;26,6
+Graduates;2012;Jul-Sep;4,9
+Other tertiary;2012;Jul-Sep;11,2
+RSA;2012;Jul-Sep;25,2
+Less than matric;2012;Oct-Dec;29,2
+Matric;2012;Oct-Dec;25,1
+Graduates;2012;Oct-Dec;4,4
+Other tertiary;2012;Oct-Dec;12,2
+RSA;2012;Oct-Dec;24,5
+Less than matric;2013;Jan-Mar;29,2
+Matric;2013;Jan-Mar;27,1
+Graduates;2013;Jan-Mar;5,5
+Other tertiary;2013;Jan-Mar;11,9
+RSA;2013;Jan-Mar;25
+Less than matric;2013;Apr-Jun;30
+Matric;2013;Apr-Jun;26,7
+Graduates;2013;Apr-Jun;5,3
+Other tertiary;2013;Apr-Jun;12,2
+RSA;2013;Apr-Jun;25,3
+Less than matric;2013;Jul-Sep;29,1
+Matric;2013;Jul-Sep;25,8
+Graduates;2013;Jul-Sep;5,5
+Other tertiary;2013;Jul-Sep;12,4
+RSA;2013;Jul-Sep;24,5
+Less than matric;2013;Oct-Dec;28,1
+Matric;2013;Oct-Dec;25,6
+Graduates;2013;Oct-Dec;5,4
+Other tertiary;2013;Oct-Dec;12,9
+RSA;2013;Oct-Dec;24,1
+Less than matric;2014;Jan-Mar;29,5
+Matric;2014;Jan-Mar;26,4
+Graduates;2014;Jan-Mar;7
+Other tertiary;2014;Jan-Mar;14
+RSA;2014;Jan-Mar;25,2
+Less than matric;2014;Apr-Jun;30,3
+Matric;2014;Apr-Jun;26,1
+Graduates;2014;Apr-Jun;6,2
+Other tertiary;2014;Apr-Jun;14,2
+RSA;2014;Apr-Jun;25,5
+Less than matric;2014;Jul-Sep;30,4
+Matric;2014;Jul-Sep;25,9
+Graduates;2014;Jul-Sep;5,1
+Other tertiary;2014;Jul-Sep;13,8
+RSA;2014;Jul-Sep;25,4
+Less than matric;2014;Oct-Dec;29,1
+Matric;2014;Oct-Dec;24,8
+Graduates;2014;Oct-Dec;5,2
+Other tertiary;2014;Oct-Dec;12,4
+RSA;2014;Oct-Dec;24,3
+Less than matric;2015;Jan-Mar;30,8
+Matric;2015;Jan-Mar;27
+Graduates;2015;Jan-Mar;6,6
+Other tertiary;2015;Jan-Mar;16,9
+RSA;2015;Jan-Mar;26,4
+Less than matric;2015;Apr-Jun;29,6
+Matric;2015;Apr-Jun;25,6
+Graduates;2015;Apr-Jun;6
+Other tertiary;2015;Apr-Jun;15,2
+RSA;2015;Apr-Jun;25
+Less than matric;2015;Jul-Sep;29,6
+Matric;2015;Jul-Sep;27,2
+Graduates;2015;Jul-Sep;5,2
+Other tertiary;2015;Jul-Sep;15,3
+RSA;2015;Jul-Sep;25,5
+Less than matric;2015;Oct-Dec;28,5
+Matric;2015;Oct-Dec;25,5
+Graduates;2015;Oct-Dec;5,1
+Other tertiary;2015;Oct-Dec;15,6
+RSA;2015;Oct-Dec;24,5
+Less than matric;2016;Jan-Mar;31,3
+Matric;2016;Jan-Mar;27,6
+Graduates;2016;Jan-Mar;6,1
+Other tertiary;2016;Jan-Mar;16,6
+RSA;2016;Jan-Mar;26,7
+Less than matric;2016;Apr-Jun;31,2
+Matric;2016;Apr-Jun;27,3
+Graduates;2016;Apr-Jun;6,5
+Other tertiary;2016;Apr-Jun;16
+RSA;2016;Apr-Jun;26,6
+Less than matric;2016;Jul-Sep;31,8
+Matric;2016;Jul-Sep;27
+Graduates;2016;Jul-Sep;7,6
+Other tertiary;2016;Jul-Sep;17,3
+RSA;2016;Jul-Sep;27,1
+Less than matric;2016;Oct-Dec;31,2
+Matric;2016;Oct-Dec;27,1
+Graduates;2016;Oct-Dec;7
+Other tertiary;2016;Oct-Dec;15,8
+RSA;2016;Oct-Dec;26,5
+Less than matric;2017;Jan-Mar;33,1
+Matric;2017;Jan-Mar;27,5
+Graduates;2017;Jan-Mar;7,3
+Other tertiary;2017;Jan-Mar;17,8
+RSA;2017;Jan-Mar;27,7
+Less than matric;2017;Apr-Jun;33,1
+Matric;2017;Apr-Jun;27,9
+Graduates;2017;Apr-Jun;7,4
+Other tertiary;2017;Apr-Jun;17
+Less than matric;2017;Apr-Jun;27,7
+Matric;2017;Jul-Sep;32,7
+Graduates;2017;Jul-Sep;28,7
+Other tertiary;2017;Jul-Sep;5,4
+RSA;2017;Jul-Sep;17,8
+Less than matric;2017;Jul-Sep;27,7
+Matric;2017;Oct-Dec;31,2
+Graduates;2017;Oct-Dec;27,5
+Other tertiary;2017;Oct-Dec;6,6
+Less than matric;2017;Oct-Dec;17
+Matric;2017;Oct-Dec;26,7
+Less than matric;2018;Jan-Mar;31,1
+Matric;2018;Jan-Mar;28,2
+Graduates;2018;Jan-Mar;7,9
+Other tertiary;2018;Jan-Mar;15,6
+RSA;2018;Jan-Mar;26,7
+Less than matric;2018;Apr-Jun;31,9
+Matric;2018;Apr-Jun;28,3
+Graduates;2018;Apr-Jun;6,9
+Other tertiary;2018;Apr-Jun;16,6
+RSA;2018;Apr-Jun;27,2
+Less than matric;2018;Jul-Sep;31,9
+Matric;2018;Jul-Sep;29,4
+Graduates;2018;Jul-Sep;6,4
+Other tertiary;2018;Jul-Sep;16,9
+RSA;2018;Jul-Sep;27,5
+Less than matric;2018;Oct-Dec;32
+Matric;2018;Oct-Dec;28
+Graduates;2018;Oct-Dec;6,7
+Other tertiary;2018;Oct-Dec;15,9
+RSA;2018;Oct-Dec;27,1
+Less than matric;2019;Jan-Mar;32,5
+Matric;2019;Jan-Mar;28,7
+Graduates;2019;Jan-Mar;7,9
+Other tertiary;2019;Jan-Mar;17,2
+RSA;2019;Jan-Mar;27,6
+Less than matric;2019;Apr-Jun;34,5
+Matric;2019;Apr-Jun;29,4
+Graduates;2019;Apr-Jun;9,1
+Other tertiary;2019;Apr-Jun;18,3
+RSA;2019;Apr-Jun;29
+Less than matric;2019;Jul-Sep;34,4
+Matric;2019;Jul-Sep;29,8
+Graduates;2019;Jul-Sep;8,2
+Other tertiary;2019;Jul-Sep;19,1
+RSA;2019;Jul-Sep;29,1
+Less than matric;2019;Oct-Dec;34,6
+Matric;2019;Oct-Dec;29,7
+Graduates;2019;Oct-Dec;7,6
+Other tertiary;2019;Oct-Dec;18,3
+RSA;2019;Oct-Dec;29,1
+Less than matric;2020;Jan-Mar;35,2
+Matric;2020;Jan-Mar;31,4
+Graduates;2020;Jan-Mar;9,5
+Other tertiary;2020;Jan-Mar;19,2
+RSA;2020;Jan-Mar;30,1
+Less than matric;2020;Apr-Jun;28,4
+Matric;2020;Apr-Jun;24,4
+Graduates;2020;Apr-Jun;6,6
+Other tertiary;2020;Apr-Jun;14,1
+Less than matric;2020;Apr-Jun;23,3
+Matric;2020;Jul-Sep;36,5
+Graduates;2020;Jul-Sep;31,5
+Other tertiary;2020;Jul-Sep;8,9
+RSA;2020;Jul-Sep;20,7
+Less than matric;2020;Jul-Sep;30,8
