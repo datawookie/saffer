@@ -1,8 +1,17 @@
 library(dplyr)
-library(readr)
+library(tabulizer)
 
-cpi <- read_csv(file.path("data-raw", "consumer-price-index.csv"), comment = "#") %>%
-  mutate(month = factor(month, levels = month.abb)) %>%
-  arrange(year, month)
+cpi_raw <- extract_tables(file = "http://www.statssa.gov.za/publications/P0141/CPIHistory.pdf?",
+                          output = "data.frame")
 
-usethis::use_data(dialing_codes, overwrite = TRUE)
+cpi_data <- bind_rows(cpi_raw) %>%
+  mutate(year = coalesce(X, Year))
+
+cpi_wide <- select(cpi_data,
+                   -c("X", "Average", "Year"))
+
+cpi <- cpi_wide  %>%
+  pivot_longer(-year,
+               names_to = "month", values_to = "cpi")
+
+usethis::use_data(cpi, overwrite = TRUE)
