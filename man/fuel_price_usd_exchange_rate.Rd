@@ -3,7 +3,7 @@
 \docType{data}
 \name{fuel_price_usd_exchange_rate}
 \alias{fuel_price_usd_exchange_rate}
-\title{Exchange rate history for the South African Rand against the US Dollar.}
+\title{Exchange rate history for the South African Rand against the US Dollar}
 \format{
 A data frame with 3 columns:
 \describe{
@@ -19,6 +19,6 @@ A data frame with 3 columns:
 fuel_price_usd_exchange_rate
 }
 \description{
-Exchange rate history for the South African Rand against the US Dollar.
+Exchange rate history for the South African Rand against the US Dollar
 }
 \keyword{datasets}

@@ -10,4 +10,4 @@
 #' }
 #'
 #' @source \url{https://api.worldbank.org/v2/countries/ZA/indicators/SL.UEM.TOTL.ZS?per_page=10000&format=JSON}
-"unemployment_rate"
+"unemployment_sa"

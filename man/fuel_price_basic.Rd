@@ -3,7 +3,7 @@
 \docType{data}
 \name{fuel_price_basic}
 \alias{fuel_price_basic}
-\title{Basic Fuel Price history for South Africa.}
+\title{Basic Fuel Price history for South Africa}
 \format{
 A data frame with 4 columns:
 \describe{
@@ -20,6 +20,6 @@ A data frame with 4 columns:
 fuel_price_basic
 }
 \description{
-Basic Fuel Price history for South Africa.
+Basic Fuel Price history for South Africa
 }
 \keyword{datasets}

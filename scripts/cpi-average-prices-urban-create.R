@@ -2,36 +2,36 @@ library(dplyr)
 library(readr)
 library(tidyr)
 
-cpi_averageprices_allurban <- read.csv(
-  file.path(
+cpi_average_prices_all_urban <- read.csv(
+  file.path(here::here(
     "data-raw",
-    "CPI_averageprices_allurban.csv"
-    ),
+    "CPI_average_prices_all_urban.csv"
+    )),
   sep=";",
   dec=",",
   na.strings='..',
   comment = "#")
 
-cpi_averageprices_allurban <- cpi_averageprices_allurban[
+cpi_average_prices_all_urban <- cpi_average_prices_all_urban[
   complete.cases(
-    cpi_averageprices_allurban$H04
+    cpi_average_prices_all_urban$H04
     ),
   ]
 
-cpi_averageprices_urban <- select(cpi_averageprices_allurban,
+cpi_average_prices_urban <- select(cpi_average_prices_all_urban,
                                   -c("H01", "H02", "H03", "H05", "H06", "H07"))
 
-cpi_averageprices_urban <- cpi_averageprices_urban %>%
+cpi_average_prices_urban <- cpi_average_prices_urban %>%
   unite("product", H04:H08, remove = TRUE, sep=' ')
 
-cpi_averageprices <- cpi_averageprices_urban %>%
+cpi_average_prices <- cpi_average_prices_urban %>%
   pivot_longer(-product,
                names_to = "date", values_to = "price")
 
-cpi_averageprices <- separate(cpi_averageprices,
+cpi_average_prices <- separate(cpi_average_prices,
                               col = date,
                               into = c("month", "year"),
                               sep = "\\.")
 
-usethis::use_data(cpi_averageprices, overwrite = TRUE)
+usethis::use_data(cpi_average_prices, overwrite = TRUE)
 
