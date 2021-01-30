@@ -3,7 +3,7 @@
 \docType{data}
 \name{cpi}
 \alias{cpi}
-\title{Consumer Price Index for South Africa.}
+\title{Consumer Price Index for South Africa}
 \format{
 A data frame with 3 variables:
 \describe{
@@ -16,6 +16,6 @@ A data frame with 3 variables:
 cpi
 }
 \description{
-Consumer Price Index for South Africa.
+Consumer Price Index for South Africa
 }
 \keyword{datasets}

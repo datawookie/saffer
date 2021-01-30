@@ -2,7 +2,7 @@
 % Please edit documentation in R/postalcodes_province.R
 \name{postalcodes_province}
 \alias{postalcodes_province}
-\title{Find province from Postal Code.}
+\title{Find province from Postal Code}
 \source{
 \url{https://en.wikipedia.org/wiki/List_of_postal_codes_in_South_Africa}
 }
@@ -10,5 +10,5 @@
 postalcodes_province(code)
 }
 \description{
-Find province from Postal Code.
+Find province from Postal Code
 }

@@ -3,7 +3,7 @@
 \docType{data}
 \name{postalcodes_geo}
 \alias{postalcodes_geo}
-\title{Geo location of postal codes for South Africa.}
+\title{Geo location of postal codes for South Africa}
 \format{
 A data frame with 3 variables:
 \describe{
@@ -19,6 +19,6 @@ A data frame with 3 variables:
 postalcodes_geo
 }
 \description{
-Geo location of postal codes for South Africa.
+Geo location of postal codes for South Africa
 }
 \keyword{datasets}
