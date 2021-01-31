@@ -1,70 +1,89 @@
 library(rvest)
 library(tidyverse)
+library(lubridate)
 library(here)
-# library(purrr)
+library(readr)
 
 source(here(file.path("R", "fuel-type.R")))
 
-URL <- "https://www.sapia.org.za/Overview/Old-fuel-prices"
+# FUEL PRICE: SAPIA ---------------------------------------------------------------------------------------------------
 
-html <- read_html(URL)
+fuel_price_sapia <- read_delim(here::here("data-raw", "fuel-price-sapia.csv"), delim = ";")
 
-tables <- html %>%
-  html_nodes(".Normal table:first-child")
-
-extract_table <- function(table) {
-  table <- table %>%
-    html_table() %>%
-    setNames(
-      c("label", month.abb)
-    )
-
-  # Interpolate region.
-  #
-  table$region <- ifelse(table$label %in% c("COASTAL", "GAUTENG"), table$label, NA)
-  #
-  table <- table %>% fill(region)
-
-  table <- table %>%
-    mutate(
-      # Clean up label.
-      label = label %>% str_replace("\\(.*\\)( \\*+)?", ""),
-      label = str_squish(label),
-      label = ifelse(is.na(region), "fuel", label),
-      region = ifelse(is.na(region), "region", region)
-    )
-
-  # Get column names from first row.
-  colnames(table) <- table[1,]
-  table <- table[-1,]
-
-  # Drop rows without data.
-  #
-  table <- table %>% filter(fuel != region)
-
-  table %>%
-    pivot_longer(
-      matches("[[:digit:]]{2}-[[:alpha:]]{3}-[[:digit:]]{2}"),
-      names_to = "date",
-      values_to = "price"
-      ) %>%
-    mutate(
-      fuel = factor(fuel, levels = fuel_type_labels),
-      date = as.Date(strptime(date, "%d-%b-%y")),
-      price = str_replace(price, ",", "."),
-      price = str_replace(price, " ", ""),
-      price = ifelse(price == "", NA, price),
-      price = as.numeric(price)
-    )
-}
-fuel_price <- map_df(tables, extract_table) %>%
+fuel_price_sapia <- fuel_price_sapia %>%
   mutate(
-    region = str_to_lower(region),
-    region = ifelse(region == "gauteng", "inland", region),
-    region = factor(region)
+    year = year(date),
+    month = month(date, label = TRUE),
+    day = mday(date)
   ) %>%
-  arrange(fuel, region, date) %>%
-  select(date, everything()) %>%
-  na.omit()
+  select(year, month, day, everything())
+
+# FUEL PRICE: GOV -----------------------------------------------------------------------------------------------------
+
+# Data from http://www.energy.gov.za/files/esources/petroleum/petroleum_arch.html
+
+col_names <- read_delim(
+  here::here("data-raw", "fuel-price-old.csv"),
+  delim = ";",
+  col_names = FALSE,
+  col_types = rep("c", 19) %>% paste0(collapse = ""),
+  n_max = 2
+) %>%
+  pivot_longer(everything()) %>%
+  na.omit() %>%
+  group_by(name) %>%
+  summarise(
+    value = paste(value, collapse = " | "),
+    .groups = "drop"
+  ) %>%
+  mutate(
+    name = as.integer(str_replace(name, "^X", ""))
+  ) %>%
+  arrange(name) %>%
+  pull(value)
+
+fuel_price_old <- read_delim(
+  here::here("data-raw", "fuel-price-old.csv"),
+  delim = ";",
+  skip = 2,
+  col_names = col_names,
+  col_types = "icidddddddddddddddd"
+) %>%
+  mutate(
+    # Fill in missing day.
+    day = ifelse(is.na(day), 1, day),
+    date = as.Date(strptime(paste(day, month, year), "%d %b %Y"))
+  ) %>%
+  pivot_longer(
+    -c(year, month, day, date)
+  ) %>%
+  na.omit() %>%
+  rename(
+    price = value
+  ) %>%
+  separate(name, c("region", "fuel"), sep = "[[:space:]]+\\|[[:space:]]+")
+
+# ---------------------------------------------------------------------------------------------------------------------
+
+FUEL_LEVELS <- c(
+  "91 ULP",
+  "93",
+  "93 LRP",
+  "93 ULP",
+  "95 LRP",
+  "95 ULP",
+  "97",
+  "97 ULP",
+  "Diesel 0.3%",
+  "Diesel 0.05%",
+  "Diesel 0.005%",
+  "Illuminating Paraffin",
+  "Liquefied Petroleum Gas"
+)
+
+fuel_price <- bind_rows(fuel_price_old, fuel_price_sapia) %>%
+  mutate(
+    fuel = factor(fuel, levels = FUEL_LEVELS)
+  )
 
 usethis::use_data(fuel_price, overwrite = TRUE)
