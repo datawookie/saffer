@@ -6,27 +6,15 @@ library(readr)
 
 source(here(file.path("R", "fuel-type.R")))
 
-# FUEL PRICE: SAPIA ---------------------------------------------------------------------------------------------------
-
-fuel_price_sapia <- read_delim(here::here("data-raw", "fuel-price-sapia.csv"), delim = ";")
-
-fuel_price_sapia <- fuel_price_sapia %>%
-  mutate(
-    year = year(date),
-    month = month(date, label = TRUE),
-    day = mday(date)
-  ) %>%
-  select(year, month, day, everything())
-
-# FUEL PRICE: GOV -----------------------------------------------------------------------------------------------------
-
 # Data from http://www.energy.gov.za/files/esources/petroleum/petroleum_arch.html
 
+FUEL_PRICE_CSV <- "fuel-price.csv"
+
 col_names <- read_delim(
-  here::here("data-raw", "fuel-price-old.csv"),
+  here::here("data-raw", FUEL_PRICE_CSV),
   delim = ";",
   col_names = FALSE,
-  col_types = rep("c", 19) %>% paste0(collapse = ""),
+  col_types = rep("c", 23) %>% paste0(collapse = ""),
   n_max = 2
 ) %>%
   pivot_longer(everything()) %>%
@@ -43,11 +31,11 @@ col_names <- read_delim(
   pull(value)
 
 fuel_price_old <- read_delim(
-  here::here("data-raw", "fuel-price-old.csv"),
+  here::here("data-raw", FUEL_PRICE_CSV),
   delim = ";",
   skip = 2,
   col_names = col_names,
-  col_types = "icidddddddddddddddd"
+  col_types = "icidddddddddddddddddddd"
 ) %>%
   mutate(
     # Fill in missing day.
@@ -62,6 +50,8 @@ fuel_price_old <- read_delim(
     price = value
   ) %>%
   separate(name, c("region", "fuel"), sep = "[[:space:]]+\\|[[:space:]]+")
+
+rm(col_names)
 
 # ---------------------------------------------------------------------------------------------------------------------
 
@@ -81,9 +71,10 @@ FUEL_LEVELS <- c(
   "Liquefied Petroleum Gas"
 )
 
-fuel_price <- bind_rows(fuel_price_old, fuel_price_sapia) %>%
+fuel_price <- fuel_price %>%
   mutate(
     fuel = factor(fuel, levels = FUEL_LEVELS)
   )
 
 usethis::use_data(fuel_price, overwrite = TRUE)
+
