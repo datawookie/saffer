@@ -30,7 +30,7 @@ col_names <- read_delim(
   arrange(name) %>%
   pull(value)
 
-fuel_price_old <- read_delim(
+fuel_price_wide <- read_delim(
   here::here("data-raw", FUEL_PRICE_CSV),
   delim = ";",
   skip = 2,
@@ -41,7 +41,9 @@ fuel_price_old <- read_delim(
     # Fill in missing day.
     day = ifelse(is.na(day), 1, day),
     date = as.Date(strptime(paste(day, month, year), "%d %b %Y"))
-  ) %>%
+  )
+
+fuel_price <- fuel_price_wide %>%
   pivot_longer(
     -c(year, month, day, date)
   ) %>%
