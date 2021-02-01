@@ -1,0 +1,39 @@
+language: r
+r:
+- release
+dist: bionic
+
+warnings_are_errors: true
+latex: false
+cache: packages
+
+r_packages:
+- pkgdown
+addons:
+  apt:
+    packages:
+    - libharfbuzz-dev
+    - libfribidi-dev
+
+before_deploy:
+# This will build the pkgdown site from README.md.
+#
+# To get README.md from README.Rmd you need to run another step first which does:
+#
+# devtools::install()
+# rmarkdown::render("README.Rmd")
+#
+# but it doesn't make sense to do this in Travis.
+#
+- Rscript -e 'pkgdown::build_favicons()'
+- Rscript -e 'pkgdown::build_site()'
+
+deploy:
+  provider: pages
+  github_token: "$GITHUB_TOKEN"
+  skip_cleanup: true
+  on:
+    branch: master
+    condition: $TRAVIS_R_VERSION_STRING = release
+  local_dir: public
+  target_branch: gh-pages
