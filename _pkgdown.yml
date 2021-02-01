@@ -1,6 +1,6 @@
 url: datawookie.github.io/saffer
 
-destination: docs
+destination: public
 
 reference:
 - title: Data
