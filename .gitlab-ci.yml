@@ -3,8 +3,8 @@ image: rocker/tidyverse
 build:
   stage: build
   before_script:
-  - apt update
-  - apt install libharfbuzz-dev libfribidi-dev
+  - apt update -qq
+  - apt install -y -qq libharfbuzz-dev libfribidi-dev
   - R -e "install.packages('pkgdown')"
   script:
   - R -e "pkgdown::build_site()"
