@@ -7,6 +7,7 @@ build:
   - apt install -y -qq libharfbuzz-dev libfribidi-dev
   - R -e "install.packages('pkgdown')"
   script:
+  - R -e "devtools::install()"
   - R -e "pkgdown::build_site()"
 
 pages:
