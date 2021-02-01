@@ -2,6 +2,9 @@ image: rocker/tidyverse
 
 build:
   stage: build
+  artifacts:
+    paths:
+      - public
   before_script:
   - apt update -qq
   - apt install -y -qq libharfbuzz-dev libfribidi-dev
