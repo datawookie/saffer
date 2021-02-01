@@ -1,0 +1,18 @@
+image: rocker/tidyverse
+
+build:
+  stage: build
+  before_script:
+  - apt install libharfbuzz-dev libfribidi-dev
+  - R -e "install.packages('pkgdown')"
+  script:
+  - R -e "pkgdown::build_site()"
+
+pages:
+  stage: deploy
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
+  interruptible: true
