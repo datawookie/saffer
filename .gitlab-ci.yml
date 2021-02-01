@@ -10,6 +10,8 @@ build:
 
 pages:
   stage: deploy
+  script:
+  - echo "🚀 Deploying pages."
   artifacts:
     paths:
     - public
