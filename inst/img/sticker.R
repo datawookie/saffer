@@ -23,6 +23,7 @@ sticker(
   s_y = 0.95,
   s_width = 0.75,
   h_color = "#000000",
-  h_fill = "#FFFFFF"
+  h_fill = "#FFFFFF",
+  filename = "logo.png"
 )
 
