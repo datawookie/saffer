@@ -4,3 +4,6 @@
 ^docs$
 ^pkgdown$
 ^LICENSE\.md$
+.bumpversion.cfg
+.gitlab-ci.yml
+.travis.yml
