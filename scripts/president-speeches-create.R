@@ -161,6 +161,21 @@ speeches <- speeches %>%
   ) %>%
   select(date, position, person, language, everything())
 
+# Replace non-ASCII characters.
+#
+speeches <- speeches %>%
+  mutate(
+    text = gsub("[‘’]", "'", text),
+    text = gsub("[“”]", '"', text),
+    text = gsub("–", "-", text),
+    text = gsub("[ôó]", "o", text),
+    text = gsub("[êé]", "e", text),
+    text = gsub("ç", "c", text),
+    text = gsub("Í", "I", text),
+    text = gsub("š", "s", text),
+    text = gsub("[•·]", "-", text)
+  )
+
 president_speeches <- speeches %>%
   select(-href, -hash) %>%
   arrange(date)
