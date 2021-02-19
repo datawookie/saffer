@@ -2,7 +2,7 @@
 
 <img src="inst/img/saffer.png" width="250" align="right">
 
-Saffer (plural Saffers): (slang) A native or inhabitant of South Africa.
+saffer (plural saffers): (slang) A native or inhabitant of South Africa.
 
 An R package aggregating a selection of things relating to South Africa.
 
