@@ -2,6 +2,7 @@
 #'
 #' @format A data frame with 4 variables:
 #' \describe{
+#'  \item{province}{}
 #'  \item{area}{}
 #'  \item{suburb}{}
 #'  \item{boxcode}{Postal code for Post Office boxes.}

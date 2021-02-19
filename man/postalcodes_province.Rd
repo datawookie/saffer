@@ -9,6 +9,9 @@
 \usage{
 postalcodes_province(code)
 }
+\arguments{
+\item{code}{Postal code as ineteger or character}
+}
 \description{
 Find province from Postal Code
 }
