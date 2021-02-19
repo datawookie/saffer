@@ -8,7 +8,7 @@ An R package aggregating a selection of things relating to South Africa.
 
 ## Installation
 
-You can install saffer from GitHub with:
+You can install `{saffer}` from [GitHub](https://github.com/datawookie/saffer) with:
 
 ``` r
 # install.packages("remotes")
