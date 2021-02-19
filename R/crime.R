@@ -9,11 +9,11 @@
 #'
 #' @format A data frame with 339471 records and 5 variables:
 #' \describe{
-#'   \item{Province}{South African Province;}
-#'   \item{Station}{Police Station in Respective Province;}
-#'   \item{Category}{Types of Crime Committed;}
-#'   \item{Year}{Year in which Crimes were Committed;}
-#'   \item{Crime_Rate}{Number of Crimes Committed in a Given Year;}
+#'   \item{province}{South African Province;}
+#'   \item{station}{Police Station in Respective Province;}
+#'   \item{category}{Types of Crime Committed;}
+#'   \item{year}{Year in which Crimes were Committed;}
+#'   \item{count}{Number of Crimes Committed in a Given Year;}
 #' }
 #'
 #' @source

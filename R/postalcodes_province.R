@@ -1,5 +1,7 @@
 #' Find province from Postal Code
 #'
+#' @param code Postal code as ineteger or character
+#'
 #' @source \url{https://en.wikipedia.org/wiki/List_of_postal_codes_in_South_Africa}
 #'
 #' @export

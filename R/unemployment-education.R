@@ -5,7 +5,7 @@
 #'  \item{education}{}
 #'  \item{year}{}
 #'  \item{quarter}{}
-#'  \item{unemployment_rate}{}
+#'  \item{unemployment rate}{}
 #' }
 #'
 #' @source \url{http://www.statssa.gov.za/publications/P0211/P02113rdQuarter2020.pdf}

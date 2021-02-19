@@ -3,7 +3,7 @@
 #' @format A data frame with 3 variables:
 #' \describe{
 #'  \item{code}{Postal code.}
-#'  \item{latitude}{Latitude.}
+#'  \item{lat}{Latitude.}
 #'  \item{lon}{Longitude.}
 #' }
 #'

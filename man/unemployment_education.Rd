@@ -10,7 +10,7 @@ A data frame with 4 variables:
  \item{education}{}
  \item{year}{}
  \item{quarter}{}
- \item{unemployment_rate}{}
+ \item{unemployment rate}{}
 }
 }
 \source{
