@@ -3,7 +3,7 @@
 #' @format A data frame with 2 columns:
 #' \describe{
 #'  \item{city}{}
-#'  \item{codes}
+#'  \item{codes}{}
 #' }
 #'
 #' @source \url{https://www.rebtel.com/en/international-calling-guide/phone-codes/south-africa/}

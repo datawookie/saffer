@@ -8,7 +8,7 @@
 A data frame with 2 columns:
 \describe{
  \item{city}{}
- \item{codes}
+ \item{codes}{}
 }
 }
 \source{

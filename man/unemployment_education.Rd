@@ -7,9 +7,9 @@
 \format{
 A data frame with 4 variables:
 \describe{
- \item{education}
+ \item{education}{}
  \item{year}{}
- \item{quarter}
+ \item{quarter}{}
  \item{unemployment_rate}{}
 }
 }
