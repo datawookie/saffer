@@ -12,6 +12,10 @@ if (!file.exists(NAME_FLAG_PNG)) {
   system(paste("convert -density 7200", NAME_FLAG_SVG, NAME_FLAG_PNG))
 }
 
+FIGURES_DIR <- here::here("man", "figures")
+#
+dir.create(FIGURES_DIR)
+
 sticker(
   "za_flag.png",
   package = "saffer",
@@ -24,6 +28,5 @@ sticker(
   s_width = 0.75,
   h_color = "#000000",
   h_fill = "#FFFFFF",
-  filename = "logo.png"
+  filename = file.path(FIGURES_DIR, "logo.png")
 )
-
