@@ -14,6 +14,7 @@ addons:
     packages:
     - libharfbuzz-dev
     - libfribidi-dev
+    - libmagick++-dev
 
 before_deploy:
 # This will build the pkgdown site from README.md.
