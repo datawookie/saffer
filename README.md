@@ -1,6 +1,6 @@
 # saffer
 
-<img src="inst/img/saffer.png" width="250" align="right">
+<img src="inst/img/logo.png" width="250" align="right">
 
 saffer (plural saffers): (slang) A native or inhabitant of South Africa.
 
