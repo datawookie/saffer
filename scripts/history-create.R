@@ -7,7 +7,10 @@ HISTORY_JSON <- here(file.path("data-raw", "history.json"))
 
 history <- read_json(HISTORY_JSON, simplifyVector = TRUE) %>%
   tibble() %>%
-  mutate(id = row_number()) %>%
+  mutate(
+    id = row_number(),
+    date = as.Date(date)
+    ) %>%
   select(id, everything())
 
 history_tagged <- history %>%
