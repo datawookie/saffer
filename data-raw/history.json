@@ -2,81 +2,96 @@
   {
     "date": "2020-03-27",
     "event": "Lockdown: Level 5",
-    "tags": ["COVID19", "lockdown"],
-    "details": [
-      "Alcohol sale banned."
-    ]
+    "tags": ["COVID", "lockdown"],
+    "details": []
+  },
+  {
+    "date": "2020-03-27",
+    "event": "Alcohol sale banned",
+    "tags": ["COVID", "alcohol"],
+    "details": []
   },
   {
     "date": "2020-05-01",
     "event": "Lockdown: Level 4",
-    "tags": ["COVID19", "lockdown"],
+    "tags": ["COVID", "lockdown"],
     "details": []
   },
   {
     "date": "2020-05-14",
-    "event": "Lockdown: Level 4",
-    "tags": ["COVID19", "lockdown"],
-    "details": [
-      "E-commerce permitted."
-    ]
+    "event": "E-commerce resumed",
+    "tags": ["COVID"]
   },
   {
     "date": "2020-06-01",
     "event": "Lockdown: Level 3",
-    "tags": ["COVID19", "lockdown"],
+    "tags": ["COVID", "lockdown"],
+    "details": []
+  },
+  {
+    "date": "2020-06-01",
+    "event": "Alcohol sale resumed",
+    "tags": ["COVID", "alcohol"],
     "details": []
   },
   {
     "date": "2020-07-12",
-    "event": "Lockdown: Level 3",
-    "tags": ["COVID19", "lockdown"],
-    "details": [
-      "Alcohol sale banned again."
-    ]
-  },
-  {
-    "date": "2020-08-13",
-    "event": "Lockdown: Level 2",
-    "tags": ["COVID19", "lockdown"],
+    "event": "Alcohol sale banned",
+    "tags": ["COVID", "alcohol"],
     "details": []
   },
   {
     "date": "2020-08-18",
     "event": "Lockdown: Level 2",
-    "tags": ["COVID19", "lockdown"],
-    "details": [
-      "Alcohol on sale again."
-    ]
+    "tags": ["COVID", "lockdown"],
+    "details": []
+  },
+  {
+    "date": "2020-08-18",
+    "event": "Alcohol sale resumed",
+    "tags": ["COVID", "alcohol"],
+    "details": []
   },
   {
     "date": "2020-09-21",
     "event": "Lockdown: Level 1",
-    "tags": ["COVID19", "lockdown"],
+    "tags": ["COVID", "lockdown"],
     "details": []
   },
   {
     "date": "2020-11-11",
-    "event": "Lockdown: Level 1",
-    "tags": ["COVID19", "lockdown"],
-    "details": [
-      "Relaxation of international travel."
-    ]
+    "event": "Relaxation of international travel restrictions",
+    "tags": ["COVID", "lockdown"],
+    "details": []
   },
   {
     "date": "2020-12-14",
-    "event": "Lockdown: Level 1",
-    "tags": ["COVID19", "lockdown"],
-    "details": [
-      "Closure of beaches."
-    ]
+    "event": "Beaches closed",
+    "tags": ["COVID"],
+    "details": []
   },
   {
     "date": "2020-12-28",
     "event": "Lockdown: Level 3",
-    "tags": ["COVID19", "lockdown"],
-    "details": [
-      "Alcohol sale banned again."
-    ]
+    "tags": ["COVID", "lockdown"],
+    "details": []
+  },
+  {
+    "date": "2021-02-28",
+    "event": "Lockdown: Level 1",
+    "tags": ["COVID", "lockdown"],
+    "details": []
+  },
+  {
+    "date": "2021-04-02",
+    "event": "Alcohol sale banned",
+    "tags": ["COVID", "alcohol"],
+    "details": []
+  },
+  {
+    "date": "2021-04-06",
+    "event": "Alcohol sale resumed",
+    "tags": ["COVID", "alcohol"],
+    "details": []
   }
 ]
