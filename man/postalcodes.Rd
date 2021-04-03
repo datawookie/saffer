@@ -14,9 +14,6 @@ A data frame with 4 variables:
  \item{streetcode}{Postal code for street addresses.}
 }
 }
-\source{
-\url{https://www.postoffice.co.za/contactus/postalcodes.xls}
-}
 \usage{
 postalcodes
 }

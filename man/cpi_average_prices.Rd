@@ -14,7 +14,7 @@ A data frame with 4 columns:
 }
 }
 \source{
-\url{http://www.statssa.gov.za/timeseriesdata/Excel/P0141\%20-\%20CPI\%20Average\%20Prices\%20All\%20urban\%20(202011).zip}
+\url{http://www.statssa.gov.za/}
 }
 \usage{
 cpi_average_prices
