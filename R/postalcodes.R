@@ -8,6 +8,4 @@
 #'  \item{boxcode}{Postal code for Post Office boxes.}
 #'  \item{streetcode}{Postal code for street addresses.}
 #' }
-#'
-#' @source \url{https://www.postoffice.co.za/contactus/postalcodes.xls}
 "postalcodes"
