@@ -110,6 +110,11 @@
     "tags": ["holiday"]
   },
   {
+    "date": "2020-04-12",
+    "event": "Easter Sunday",
+    "tags": ["holiday", "religious"]
+  },
+  {
     "date": "2020-04-13",
     "event": "Family Day",
     "tags": ["holiday"]
@@ -168,6 +173,11 @@
     "date": "2021-04-02",
     "event": "Good Friday",
     "tags": ["holiday"]
+  },
+  {
+    "date": "2021-04-04",
+    "event": "Easter Sunday",
+    "tags": ["holiday", "religious"]
   },
   {
     "date": "2021-04-05",
