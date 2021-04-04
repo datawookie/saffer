@@ -5,5 +5,6 @@
 inst/doc
 public/
 *~lock*
+*.tar.gz
 inst/img/za_flag*
 za_flag.*

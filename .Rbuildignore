@@ -3,7 +3,9 @@
 ^_pkgdown\.yml$
 ^docs$
 ^pkgdown$
-^LICENSE\.md$
+^LICENSE.md$
+\.tar\.gz$
+Makefile
 .bumpversion.cfg
 .travis.yml
 data-raw/
