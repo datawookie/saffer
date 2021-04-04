@@ -5,7 +5,7 @@
 \alias{history}
 \title{History}
 \format{
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 40 rows and 5 columns.
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 42 rows and 5 columns.
 }
 \usage{
 history
