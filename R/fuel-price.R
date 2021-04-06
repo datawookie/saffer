@@ -10,6 +10,4 @@
 #'  \item{fuel}{}
 #'  \item{price}{Prices are in cents per litre for all fuels except Liquefied Petroleum Gas (LPG), where the price is in cents per kilogram.}
 #' }
-#'
-#' @source \url{https://www.sapia.org.za/}
 "fuel_price"
