@@ -1,7 +1,7 @@
 Package: saffer
 Type: Package
 Title: Things Relating to South Africa
-Version: 0.1.2
+Version: 0.1.3
 Authors@R: c(
     person("Andrew B.", "Collier", email = "andrew.b.collier@gmail.com", role = c("aut", "cre")),
     person("Jon", "Calder", email = "jonmcalder@gmail.com", role = c("aut")),
