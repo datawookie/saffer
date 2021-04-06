@@ -14,7 +14,7 @@ col_names <- read_delim(
   here::here("data-raw", FUEL_PRICE_CSV),
   delim = ";",
   col_names = FALSE,
-  col_types = rep("c", 23) %>% paste0(collapse = ""),
+  col_types = rep("c", 24) %>% paste0(collapse = ""),
   n_max = 2
 ) %>%
   pivot_longer(everything()) %>%
@@ -35,7 +35,7 @@ fuel_price_wide <- read_delim(
   delim = ";",
   skip = 2,
   col_names = col_names,
-  col_types = "icidddddddddddddddddddd"
+  col_types = "iciddddddddddddddddddddd"
 ) %>%
   mutate(
     # Fill in missing day.
