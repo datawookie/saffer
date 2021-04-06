@@ -9,10 +9,10 @@ city <- html %>%
   html_nodes(".pull-left") %>%
   html_text()
 
-codes <- html %>%
+code <- html %>%
   html_nodes(".pull-right") %>%
   html_text()
 
-dialing_codes <- data.frame(city, codes)
+dialing_codes <- data.frame(city, code)
 
-usethis::use_data(dialing_codes)
+usethis::use_data(dialing_codes, overwrite = TRUE)

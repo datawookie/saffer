@@ -4,6 +4,7 @@
 #' \describe{
 #'  \item{city}{}
 #'  \item{code}{Dialing Code}
+#' }
 #'
 #' @source \url{https://www.rebtel.com/en/international-calling-guide/phone-codes/south-africa/}
 "dialing_codes"
