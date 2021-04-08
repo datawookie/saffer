@@ -223,5 +223,75 @@
     "date": "2021-12-26",
     "event": "Day of Goodwill",
     "tags": ["holiday"]
+  },
+  {
+    "date": "2022-01-01",
+    "event": "New Year's Day",
+    "tags": ["holiday"]
+  },
+  {
+    "date": "2022-03-21",
+    "event": "Human Rights Day",
+    "tags": ["holiday"]
+  },
+  {
+    "date": "2022-04-15",
+    "event": "Good Friday",
+    "tags": ["holiday"]
+  },
+  {
+    "date": "2022-04-17",
+    "event": "Easter Sunday",
+    "tags": ["holiday", "religious"]
+  },
+  {
+    "date": "2022-04-18",
+    "event": "Family Day",
+    "tags": ["holiday"]
+  },
+  {
+    "date": "2022-04-27",
+    "event": "Freedom Day",
+    "tags": ["holiday"]
+  },
+  {
+    "date": "2022-05-01",
+    "event": "Workers' Day",
+    "tags": ["holiday"]
+  },
+  {
+    "date": "2022-05-02",
+    "event": "Workers' Day (observed)",
+    "tags": ["holiday"]
+  },
+  {
+    "date": "2022-06-16",
+    "event": "Youth Day",
+    "tags": ["holiday"]
+  },
+  {
+    "date": "2022-08-09",
+    "event": "National Women's Day",
+    "tags": ["holiday"]
+  },
+  {
+    "date": "2022-09-24",
+    "event": "Heritage Day",
+    "tags": ["holiday"]
+  },
+  {
+    "date": "2022-12-16",
+    "event": "Day of Reconciliation",
+    "tags": ["holiday"]
+  },
+  {
+    "date": "2022-12-25",
+    "event": "Christmas Day",
+    "tags": ["holiday"]
+  },
+  {
+    "date": "2022-12-26",
+    "event": "Day of Goodwill",
+    "tags": ["holiday"]
   }
 ]
