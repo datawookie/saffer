@@ -9,7 +9,7 @@ FILE = "http://www.statssa.gov.za/cpi/documents/The_South_African_CPI_sources_an
 raw_data <- pdf_data(FILE)
 
 # Get relevant page range
-table <- map_dfr(49:59, ~ raw_data[.x]) %>%
+table <- map_dfr(49:58, ~ raw_data[.x]) %>%
   # Remove text that doesn't belong in table
   filter(height == 8) %>%
   # Remove most column headers
@@ -35,14 +35,26 @@ indicator_product <- table %>%
   mutate(indicator_product = paste(text, collapse = " ")) %>%
   group_by(index) %>%
   slice(1) %>%
-  arrange(index) %>%
   ungroup() %>%
-  select(indicator_product)
+  arrange(index) %>%
+  select(indicator_product) %>%
+  # Clean up text
+  mutate(indicator_product = str_to_lower(indicator_product) %>%
+           str_replace_all(" -|- | - ", " ") %>%
+           str_replace_all("\\s\\s", " ") %>%
+           str_replace_all(",(?=\\w)", ", ") %>%
+           str_replace_all("(?<=\\w)\\(", " (") %>%
+           str_replace_all("-(?=frozen|fresh)", " ") %>%
+           str_replace_all("\\(\\s", "(") %>%
+           str_replace_all("\\(eg", "(e.g.") %>%
+           str_replace_all("etc\\)", "etc.)")
+           )
 
 provincial_baskets <- table %>%
   filter(x >= COLUMN_BREAKS[4] & x < COLUMN_BREAKS[5]) %>%
+  filter(!text %in% c("Provincial", "baskets")) %>%
   # Get provincial basket text into a single row
-  mutate(index = ifelse(x == 394, row_number(), NA)) %>%
+  mutate(index = ifelse(x < 400, row_number(), NA)) %>%
   fill(index) %>%
   group_by(index) %>%
   mutate(provincial_baskets = paste(text, collapse = " ")) %>%
@@ -53,7 +65,8 @@ provincial_baskets <- table %>%
   select(provincial_baskets) %>%
   # Clean up text
   mutate(provincial_baskets = str_replace_all(provincial_baskets, " ", ""),
-         provincial_baskets = str_replace_all(provincial_baskets, ",", ", "))
+         provincial_baskets = str_replace_all(provincial_baskets, ",", ", "),
+         provincial_baskets = str_replace_all(provincial_baskets, "Allprovinces", "All provinces"))
 
 coicop_code <- table %>%
   filter(x >= COLUMN_BREAKS[1] & x < COLUMN_BREAKS[2]) %>%
@@ -89,4 +102,5 @@ weights_food_beverages <- data.frame(
     provincial_baskets = provincial_baskets
   ) %>%
   select(coicop_code, product_code, indicator_product,
-         provincial_baskets, total_country_weight, headline_weight)
+         provincial_baskets, total_country_weight, headline_weight) %>%
+  filter(coicop_code != "02.1.1.1")
