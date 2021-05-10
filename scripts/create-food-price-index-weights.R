@@ -1,15 +1,26 @@
+# A script to extract the StatsSA food price index weights and component history
+
+# LOAD RESOURCES ----------------------------------------------------------
+
 library(dplyr)
 library(purrr)
 library(stringr)
 library(tidyr)
 library(pdftools)
+library(readxl)
 
-FILE = "http://www.statssa.gov.za/cpi/documents/The_South_African_CPI_sources_and_methods_May2017.pdf"
+# Source: http://www.statssa.gov.za/cpi/documents/The_South_African_CPI_sources_and_methods_May2017.pdf
+FILE_WEIGHTS = here::here("data-raw/cpi-sources-methods-weights.pdf")
 
-raw_data <- pdf_data(FILE)
+# Source: http://www.statssa.gov.za/timeseriesdata/Excel/P0141%20-%20CPI(5%20and%208%20digit)%20from%20Jan%202017%20(202103).zip
+FILE_HISTORY = here::here("data-raw/food-price-index-history.xlsx")
+
+# FOOD PRICE INDEX WEIGHTS ------------------------------------------------
+
+raw_weights <- pdf_data(FILE_WEIGHTS)
 
 # Get relevant page range
-table <- map_dfr(49:58, ~ raw_data[.x]) %>%
+table <- map_dfr(49:58, ~ raw_weights[.x]) %>%
   # Remove text that doesn't belong in table
   filter(height == 8) %>%
   # Remove most column headers
@@ -104,3 +115,7 @@ weights_food_beverages <- data.frame(
   select(coicop_code, product_code, indicator_product,
          provincial_baskets, total_country_weight, headline_weight) %>%
   filter(coicop_code != "02.1.1.1")
+
+# FOOD PRICE INDEX HISTORY ------------------------------------------------
+
+raw_history <- read_excel(FILE_HISTORY)
