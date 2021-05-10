@@ -14,6 +14,8 @@ library(readxl)
 # Source: http://www.statssa.gov.za/cpi/documents/The_South_African_CPI_sources_and_methods_May2017.pdf
 FILE = here::here("data-raw/cpi-sources-methods-weights.pdf")
 
+RDA_CPI_WEIGHTS = here::here("data/cpi-weights.rda")
+
 COLUMN_BREAKS = c(82, 132, 267, 394, 572, 675)
 PAGE_RANGE = 49:86
 
@@ -108,6 +110,5 @@ cpi_weights <- data.frame(
   select(coicop_code, product_code, indicator_product,
          provincial_baskets, total_country_weight, headline_weight)
 
-# FOOD PRICE INDEX HISTORY ------------------------------------------------
-
-raw_history <- read_excel(FILE_HISTORY)
+# WRITE DATA --------------------------------------------------------------
+save(cpi_weights, file = RDA_CPI_WEIGHTS)
