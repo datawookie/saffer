@@ -1,4 +1,4 @@
-# A script to extract the StatsSA food price index weights and component history
+# A script to extract the StatsSA consumer price index weights
 
 # LOAD RESOURCES ----------------------------------------------------------
 
@@ -9,24 +9,29 @@ library(tidyr)
 library(pdftools)
 library(readxl)
 
+# DEFINE CONSTANTS --------------------------------------------------------
+
 # Source: http://www.statssa.gov.za/cpi/documents/The_South_African_CPI_sources_and_methods_May2017.pdf
-FILE_WEIGHTS = here::here("data-raw/cpi-sources-methods-weights.pdf")
-
-# Source: http://www.statssa.gov.za/timeseriesdata/Excel/P0141%20-%20CPI(5%20and%208%20digit)%20from%20Jan%202017%20(202103).zip
-FILE_HISTORY = here::here("data-raw/food-price-index-history.xlsx")
-
-# FOOD PRICE INDEX WEIGHTS ------------------------------------------------
-
-raw_weights <- pdf_data(FILE_WEIGHTS)
-
-# Get relevant page range
-table <- map_dfr(49:58, ~ raw_weights[.x]) %>%
-  # Remove text that doesn't belong in table
-  filter(height == 8) %>%
-  # Remove most column headers
-  filter(y > 130)
+FILE = here::here("data-raw/cpi-sources-methods-weights.pdf")
 
 COLUMN_BREAKS = c(82, 132, 267, 394, 572, 675)
+PAGE_RANGE = 49:86
+
+# SCRAPE DOCUMENT ---------------------------------------------------------
+
+raw_weights <- pdf_data(FILE)
+
+# Get relevant page range
+table <- map_dfr(PAGE_RANGE, ~ raw_weights[.x] %>%
+                   as.data.frame() %>%
+                   # Remove text that doesn't belong in table
+                   filter(height >= 8 & height <= 10) %>%
+                   # Fix exceptions caused by 'en' dashes
+                   mutate(y = ifelse(str_detect(text, "–"), y + 2, y))  %>%
+                   # Need to make sure that tables are correctly ordered.
+                   arrange(y, x)) %>%
+  # Remove most column headers
+  filter(y > 130)
 
 product_code <- table %>%
   filter(x >= COLUMN_BREAKS[2] & x < COLUMN_BREAKS[3]) %>%
@@ -48,18 +53,7 @@ indicator_product <- table %>%
   slice(1) %>%
   ungroup() %>%
   arrange(index) %>%
-  select(indicator_product) %>%
-  # Clean up text
-  mutate(indicator_product = str_to_lower(indicator_product) %>%
-           str_replace_all(" -|- | - ", " ") %>%
-           str_replace_all("\\s\\s", " ") %>%
-           str_replace_all(",(?=\\w)", ", ") %>%
-           str_replace_all("(?<=\\w)\\(", " (") %>%
-           str_replace_all("-(?=frozen|fresh)", " ") %>%
-           str_replace_all("\\(\\s", "(") %>%
-           str_replace_all("\\(eg", "(e.g.") %>%
-           str_replace_all("etc\\)", "etc.)")
-           )
+  select(indicator_product)
 
 provincial_baskets <- table %>%
   filter(x >= COLUMN_BREAKS[4] & x < COLUMN_BREAKS[5]) %>%
@@ -90,8 +84,7 @@ coicop_code <- table %>%
 total_country_weight <- table %>%
   filter(x >= COLUMN_BREAKS[5] & x < COLUMN_BREAKS[6]) %>%
   # Cooerce to numeric and then remove NAs to get rid of stray text
-  mutate(text = as.numeric(text)) %>%
-  filter(!is.na(text)) %>%
+  filter(!is.na(as.numeric(text))) %>%
   select(total_country_weight = text)
 
 headline_weight <- table %>%
@@ -99,7 +92,7 @@ headline_weight <- table %>%
   select(headline_weight = text)
 
 # Put all the columns together
-weights_food_beverages <- data.frame(
+cpi_weights <- data.frame(
   coicop_code = coicop_code,
   # Need to remove the first record in each row - anomaly in raw data
   total_country_weight = total_country_weight[-1,],
@@ -113,8 +106,7 @@ weights_food_beverages <- data.frame(
     provincial_baskets = provincial_baskets
   ) %>%
   select(coicop_code, product_code, indicator_product,
-         provincial_baskets, total_country_weight, headline_weight) %>%
-  filter(coicop_code != "02.1.1.1")
+         provincial_baskets, total_country_weight, headline_weight)
 
 # FOOD PRICE INDEX HISTORY ------------------------------------------------
 
