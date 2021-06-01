@@ -8,3 +8,4 @@ public/
 *.tar.gz
 inst/img/za_flag*
 za_flag.*
+.DS_Store
