@@ -200,6 +200,18 @@
     "tags": ["holiday"]
   },
   {
+    "date": "2021-06-27",
+    "event": "Lockdown: Level 4 (Adjusted)",
+    "tags": ["COVID", "lockdown"],
+    "details": []
+  },
+  {
+    "date": "2021-06-27",
+    "event": "Alcohol sale banned",
+    "tags": ["COVID", "alcohol"],
+    "details": []
+  },
+  {
     "date": "2021-08-09",
     "event": "National Women's Day",
     "tags": ["holiday"]
