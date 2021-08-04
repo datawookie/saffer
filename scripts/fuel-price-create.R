@@ -12,7 +12,7 @@ FUEL_PRICE_CSV <- "fuel-price.csv"
 
 col_names <- read_delim(
   here::here("data-raw", FUEL_PRICE_CSV),
-  delim = ";",
+  delim = ",",
   col_names = FALSE,
   col_types = rep("c", 24) %>% paste0(collapse = ""),
   n_max = 2
@@ -32,7 +32,7 @@ col_names <- read_delim(
 
 fuel_price_wide <- read_delim(
   here::here("data-raw", FUEL_PRICE_CSV),
-  delim = ";",
+  delim = ",",
   skip = 2,
   col_names = col_names,
   col_types = "iciddddddddddddddddddddd"
