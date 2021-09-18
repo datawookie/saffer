@@ -19,4 +19,4 @@ gh_card <- image_canvas_ghcard("#ffffff") %>%
 gh_card
 
 gh_card %>%
-  image_write(here::here("man/figures/emayili-github-card.png"))
+  image_write(here::here("man/figures/saffer-github-card.png"))
