@@ -26,3 +26,11 @@ Other useful links for SA data:
 - [South Africa Data Portal](http://southafrica.opendataforafrica.org/)
 - [OpenUp](https://openup.org.za/)
 - [South African Higher Education Open Data (Center for Higher Education Trust)](https://chet.org.za/)
+
+## Data Sources
+
+### Fuel Price
+
+- http://www.energy.gov.za/files/esources/petroleum/petroleum_fuelprices.html
+- [Petrol Price Archive](http://www.energy.gov.za/files/esources/petroleum/petroleum_arch.html)
+- https://www.sapia.org.za/Overview/Old-fuel-prices
