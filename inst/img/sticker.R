@@ -28,5 +28,5 @@ sticker(
   s_width = 0.75,
   h_color = "#000000",
   h_fill = "#FFFFFF",
-  filename = file.path(FIGURES_DIR, "logo.png")
+  filename = file.path(FIGURES_DIR, "saffer-hex.png")
 )
