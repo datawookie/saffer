@@ -15,6 +15,8 @@ document:
 #
 rda:
 	Rscript scripts/history-create.R
+	Rscript scripts/fuel-price-create.R
+	Rscript scripts/fuel-price-basic-create.R
 
 build: rda document
 	@${R} -e "devtools::build()"
