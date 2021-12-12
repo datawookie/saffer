@@ -5,7 +5,7 @@
 \alias{history_tagged}
 \title{History with Tags}
 \format{
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 42 rows and 8 columns.
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 58 rows and 8 columns.
 }
 \usage{
 history_tagged
