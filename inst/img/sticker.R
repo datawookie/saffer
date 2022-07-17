@@ -18,15 +18,17 @@ dir.create(FIGURES_DIR)
 
 sticker(
   "za_flag.png",
-  package = "saffer",
-  p_y = 1.6,
+  package = "{saffer}",
+  p_x = 1.215,
+  p_y = 1.0225,
   p_size = 20,
-  p_color = "#000000",
-  p_family = "sans",
+  p_color = "#ffffff",
+  p_family = "mono",
   s_x = 1,
-  s_y = 0.95,
-  s_width = 0.75,
+  s_y = 1,
+  s_width = 1.925,
   h_color = "#000000",
   h_fill = "#FFFFFF",
+  white_around_sticker = TRUE,
   filename = file.path(FIGURES_DIR, "saffer-hex.png")
 )
