@@ -1,4 +1,4 @@
-# saffer
+# {saffer}
 
 <img src="man/figures/saffer-hex.png" width="250" align="right">
 
